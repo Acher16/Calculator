@@ -51,6 +51,9 @@ public class Main {
 
         String[] values = input.split(regex[operation]);
 
+//        Добавил проверку на ввод более двух операндов
+        if (values.length > 2) throw new CalculatorException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+
         String value1 = values[0].trim();
         String value2 = values[1].trim();
 
